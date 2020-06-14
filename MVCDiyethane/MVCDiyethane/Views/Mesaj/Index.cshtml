@@ -1,0 +1,30 @@
+﻿@using MVCDiyethane.Models.Entity
+@model List<TBLILETISIM>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<h2>Mesajlar</h2>
+<div style=" margin-bottom:25px"></div>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>ADI-SOYADI</th>
+        <th>MAİL</th>
+        <th>KONU</th>
+        <th>MESAJ</th>
+        
+
+    </tr>
+    @foreach (var m in Model)
+    {
+        <tr>
+            <td>@m.ID</td>
+            <td>@m.AD</td>
+            <td>@m.MAIL</td>
+            <td>@m.KONU</td>
+            <td>@m.MESAJ</td>
+
+        </tr>
+    }
+</table>

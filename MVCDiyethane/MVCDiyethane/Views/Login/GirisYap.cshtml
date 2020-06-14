@@ -1,0 +1,74 @@
+﻿@using MVCDiyethane.Models.Entity
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Web Proje">
+    <meta name="author" content="Müberra DURUPINAR">
+    <meta name="keywords" content="HTML,CSS,DERSLER">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--bu stır saygıtlka uyumllu olmasını sağlar-->
+
+    <title>YEMEK YADA YEMEMEK</title>
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="~/webx/css/reset.css">
+
+    <!--  RESET CSS İNTERNET TARAYICILARIN KENDİ KENDİNE
+    VERDİĞİ ÖZELLİKLERİ SIFIRLAMAMIZI SAĞLLAR-->
+    <link rel="stylesheet" type="text/css" href="~/webx/css/main.css">
+
+</head>
+
+<body class="resim">
+    <div class="body">
+        <div class="containerlogin">
+            <div class="col2login">
+                <div class="login-box">
+                    <h2>GIRIS</h2>
+                    @using (Html.BeginForm("GirisYap", "Login", FormMethod.Post))
+                    {
+
+                        <div class="textbox">
+                            <input type="text" class="form-control" placeholder="Kullanıcı Adı:" name="MAIL" required="required" value="">
+                        </div>
+                        <div class="textbox">
+                            <input type="password" class="form-control" placeholder="Şifre:" name="SIFRE" required="required" value="">
+                        </div>
+
+                        <input class="btn" type="submit" value="GİRİŞ">
+                       
+
+                    }
+
+
+
+                    @*<a href="/AdminGiris/AdminGiris/"><input class="btn" type="button" name="" value="ADMİN GİRİŞ"></a>*@
+
+
+
+                 
+                    <h3>Bir Hesabınız Yokmu?</h3>
+                    <a href="/Kayit/Kayit/"><input class="btn" type="button" name="" value="KAYIT OL"></a>
+
+                </div>
+                </div>
+            <div class="col2login">
+
+            </div>
+            
+
+            
+            
+              
+
+        </div>
+    </div>
+
+</body>
+</html>

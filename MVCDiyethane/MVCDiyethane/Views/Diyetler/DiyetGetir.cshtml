@@ -1,0 +1,33 @@
+﻿@model MVCDiyethane.Models.Entity.TBLDIYETLER
+@{
+    ViewBag.Title = "DiyetGetir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+@using (Html.BeginForm("DiyetGuncelle", "Diyetler", FormMethod.Post))
+   
+{
+<div style=" margin-bottom:15px"></div>
+<div class="form-group">
+    <div style="margin-bottom:15px">
+        <label>Diyet ID</label>
+        @Html.TextBoxFor(k => k.ID, new { @class = "form-control" })
+    </div>
+    <div style="margin-bottom:15px">
+        <label>Diyet Adı</label>
+        @Html.TextBoxFor(k => k.AD, new { @class = "form-control" })
+    </div>
+    <div style="margin-bottom:15px">
+        <label>Kategori</label>
+        @Html.DropDownListFor(k => k.TBLKATEGORI.ID, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+    </div>
+    <div style="margin-bottom:15px">
+        <label>Yazarı</label>
+        @Html.DropDownListFor(k => k.TBLYAZAR.ID, (List<SelectListItem>)ViewBag.dgr2, new { @class = "form-control" })
+    </div>
+       <button class="btn btn-warning">Diyet Bilgilerini Güncelle</button>
+    <input type="hidden" name="Durum" value="True" />
+</div>
+}
+
+
+

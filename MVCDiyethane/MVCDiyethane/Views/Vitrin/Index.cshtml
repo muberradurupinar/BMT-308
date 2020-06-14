@@ -1,0 +1,148 @@
+﻿@using MVCDiyethane.Models.Entity
+@model List<TBLDIYETLER>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Web Proje">
+    <meta name="author" content="Müberra DURUPINAR">
+    <meta name="keywords" content="HTML,CSS,DERSLER">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--bu staır saygıtlka uyumllu olmasını sağlar-->
+
+    <title>YEMEK-YADA-YEMEMEK</title>
+
+
+    
+    <!-- Theme CSS -->
+    <link href="~/web/css/freelancer.min.css" rel="stylesheet">
+
+    
+    
+    
+
+   
+
+    <link rel="stylesheet" type="text/css" href="~/webx/css/reset.css">
+
+    <!--  RESET CSS İNTERNET TARAYICILARIN KENDİ KENDİNE
+    VERDİĞİ ÖZELLİKLERİ SIFIRLAMAMIZI SAĞLLAR-->
+    <link rel="stylesheet" type="text/css" href="~/webx/css/main.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <!--container classı hazır bir kütüphane-->
+            <div class="logo">
+                <a href="/Vitrin/Index/"><img src="~/webx/images/logo.PNG"></a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/Vitrin/Index/">ANASAYFA</a></li>
+                    <li><a href="/Vitrin/Hakkimizda/">HAKKIMIZDA</a></li>
+                    <li><a href="/Vitrin/Iletisim/">ILETISIM</a></li>
+                    <li><a href="/Login/GirisYap/">ÇIKIS</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- MAİN SECTİON -->
+    <!--div kutu modelleme için kullanılır main section ana fotonun oldfuğu bölüm-->
+    <section id="mainSlider" class="slider">
+        <div id="mainCaption" class="caption">
+            <h1><strong>YEMEK YADA YEMEMEK</strong></h1>
+            <h3>Neyi Yeyip Neyi Yemeyeceğiinize Artık Biz Karar Veriyoruz . . .</h3>
+        </div>
+    </section>
+
+
+    <!-- FEATURE SECTİON -->
+    <section class="page-section portfolio" id="portfolio">
+        <div>
+            <div class="featuresTop">
+                <h2 class="sectionHeader">DİYETLER</h2>
+                <p>Aşağıdan menü seçiniz kendinize uygun diyeti bulunuz.</p>
+            </div>
+
+            <div class="row">
+                <!-- Portfolio Item 1 -->
+                @foreach (var x in Model)
+                {
+                <div class="col-md-6 col-lg-4">
+                  
+                    <div class="container">
+                        <div class="col3">
+                            <div class="item">
+                                <div class="zoom">
+                                    <img src="@x.DIYETRESIM">
+                                </div>
+                                <div class="itemText">
+                                    <h3>@x.TBLKATEGORI.AD</h3>
+                                    <p>@x.AD</p>
+                                    <a href="@x.DIYETBAGLANTI" class="btnDetails">Videoya Git...</a>
+                                    <!--# bu işaret olduğu sayfaya geri dön demek-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                   
+                }
+
+            </div>
+
+            <!-- /.row -->
+
+        </div>
+    </section>
+   
+
+
+    <!-- FOOTER SECTİON -->
+
+    <footer class="sectionArea">
+        <div class="container">
+            <div class="col3">
+                <div class="footerItem">
+                    <h3>HOSGELDİNİZ</h3>
+                    <a href="/Vitrin/Index/"><img src="~/webx/images/logo.PNG"></a>
+
+                </div>
+            </div>
+            <div class="col3">
+                <div class="footerItem">
+                    <h3>HIZLI BAGLANTI</h3>
+                    <ul class="footerLinks">
+                        <li><a href="/Vitrin/Index/">ANASAYFA</a></li>
+                        <li><a href="/Vitrin/Hakkimizda/">HAKKIMIZDA</a></li>
+                        <li><a href="/Vitrin/Iletisim/">İLETİŞİM</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col3">
+                <div class="footerItem">
+                    <h3>SOSYAL MEDYA </h3>
+                    <ul class="socialLinks">
+                        <li><a href="#"><i class="fa fa-twitter "></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+                    </ul>
+
+                    <p>Bize sosyal medya hesaplarımızdanda ulaşabilirsiiniz.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

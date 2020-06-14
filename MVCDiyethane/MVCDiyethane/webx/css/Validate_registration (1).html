@@ -1,0 +1,108 @@
+"<html>
+    <head>
+        <title> WEEK_4 JAVASCRIPT </title>
+       <style>
+           body{background-color:#34e7e4;
+                color:red;
+                font-family: sans-serif;
+                font-size: 18px; 
+                font-style:bold;}
+           h1{
+               text-align: center;
+                             
+           }
+           
+
+       </style>
+    </head>
+    <body>
+       <form name="formx" method="POST" id="frm1" onsubmit="return kayit()" action="Validate_registration.html">
+               <h1>ENTRY FORM</h1> 
+               <p>Enter your Name : <input style="margin-left: 35px; " type="text" name="adi" id="uname" required > </input> </p>
+               <p>Enter your Age :  <input style="margin-left: 52px;" type="text" name="age" id="agex" required ></input> </p>
+               <p> Enter your Address : <textarea style="margin-left: 18px;" id="adx"  required ></textarea> </p>
+             
+                Sex:
+                    <input class="radio" style="margin-left: 150px;" type="radio" value="1" name="gender" id="gnd" required> Female <br>
+                    <br>
+                    <input class="radio" style="margin-left: 190px;" type="radio" value="2" name="gender" id="gnnd" required> Male <br>
+            <!--burada name aynı verilmesi aynı anda sadece birinin seçilmesini sağlar farklı verilirse ikiside seçilebilirdi value de inputu tutan değişken adres satırında görüntülenip gönderilen nesne yani -->
+                <p>Languages : <input class="check" style="margin-left: 85px;" type="checkbox" name="lang" id="lng1" value="1"> JAVASCRIPT <br>
+                    <input class="check" style="margin-left: 188px;" type="checkbox" name="lang" id="lng2" value="2"> ASP <br>
+                    <input class="check" style="margin-left: 188px;" type="checkbox" name="lang" id="lng3" value="3"> OTHERS <br>
+                </p>
+                <p>Enter your Password : <input style="margin-left: 8px;" type="password" name="pass" id="psw" required></input></p>
+                <p>
+                    <input style="margin-left: 100px;" type="button" value="reset" onclick="reset()"> </input>
+                    <input style="margin-left:10px;" type="button" value="check" onclick="kontrol()" ></input>
+                </p>
+                <p > Before submitting the datas please click the
+                </p>
+                <p style="margin-left: 120px;"> check Button</p>
+                <p style="margin-left: 115px; visibility: hidden;"> <input type="submit" value="            submit               "  name="btn1" id="btn"> </input></p>
+            </form>
+    </body>
+    <script>
+        function kontrol(){
+            var form= document.forms["frm1"];
+            var deger_ad= form["uname"].value;
+            var deger_yas = form["agex"].value;
+            var deger_adres= form["adx"].value;
+            var deger_cins=document.getElementById('gnd');
+            var deger_cins2= document.getElementById('gnnd')
+            var deger_lang1=document.getElementById('lng1');
+            var deger_lang2=document.getElementById('lng2');
+            var deger_lang3=document.getElementById('lng3');
+            var deger_sifre=form["psw"].value;
+            var buton =form["btn"];
+
+            if(deger_ad== "" ){
+                alert("please enter the name");
+                return false;
+            }
+            else if(deger_yas==""){
+                alert("please enter the age");
+                return false;
+            }
+            else if(deger_adres==""){
+                alert("please enter the adress");
+                return false;
+            }
+            /*if(deger_cins.checked==false || deger_cins2.checked==false){
+                alert("seç be gülüm yorma beni");
+            }*/
+            else if((deger_cins.checked == false) && (deger_cins2.checked ==false) ){
+                
+                    alert("please select gender");
+                    return false;
+            }
+            
+            else if((deger_lang1.checked==false) && (deger_lang2.checked==false) && (deger_lang3.checked==false)){
+
+                        alert("please select language");
+                        return false;
+            }
+
+            else if(deger_sifre==""){
+                alert("please enter the password");
+                return false;
+            }
+            else {
+                
+                alert("kontrol edildi");
+                goster();            
+                return true;
+            }
+        }
+        function kayit(){
+            alert("Kaydınız başarıyla yapılmıştır.")
+        }
+        function reset(){
+            document.getElementById("frm1").reset();
+        }
+        function goster(){
+            document.getElementById('btn').style=" visibility: visible;";
+            
+        }
+    </script>
+</html>

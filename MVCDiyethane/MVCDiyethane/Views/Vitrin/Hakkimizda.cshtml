@@ -1,0 +1,118 @@
+﻿@using MVCDiyethane.Models.Entity
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Web Proje">
+    <meta name="author" content="Müberra DURUPINAR">
+    <meta name="keywords" content="HTML,CSS,DERSLER">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--bu staır saygıtlka uyumllu olmasını sağlar-->
+
+    <title>YEMEK YADA YEMEMEK</title>
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="~/webx/css/reset.css">
+
+    <!--  RESET CSS İNTERNET TARAYICILARIN KENDİ KENDİNE
+    VERDİĞİ ÖZELLİKLERİ SIFIRLAMAMIZI SAĞLLAR-->
+    <link rel="stylesheet" type="text/css" href="~/webx/css/main.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <!--container classı hazır bir kütüphane-->
+            <div class="logo">
+                <a href="/Vitrin/Index/"><img src="~/webx/images/logo.PNG"></a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/Vitrin/Index/">ANASAYFA</a></li>
+                    <li><a href="/Vitrin/Hakkimizda/">HAKKIMIZDA</a></li>
+                    <li><a href="/Vitrin/Iletisim/">ILETISIM</a></li>
+                    <li><a href="/Login/GirisYap/">ÇIKIS</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- MAİN SECTİON -->
+    <!--div kutu modelleme için kullanılır main section ana fotonun oldfuğu bölüm-->
+    <section id="eatsSlider" class="slider">
+        <div id="eatsCaption" class="caption">
+            <h1><strong>BİZ KİMİZ?</strong></h1>
+
+        </div>
+    </section>
+
+
+    <!-- INSPECT SECTİON 2000 e 1333px-->
+    <section id="inspect" class="sectionArea">
+        <div class="inspectTop">
+            <h2 class="sectionHeader"> HAKKIMIZDA</h2>
+            <div class="textbox">
+                <p>
+                    Doğru bir şekilde beslenmenin nasıl olması gerektiğini, bu konu hakkında bireylerin kafalarındaki soru işaretlerini giderebilmek adına hazırlanmış olan bu site;
+
+                    Bu alanda bir çok benzerinin bulunmasının aksine size daha kolay ve samimi bir hizmet vermeyi amaçlamaktadır.
+
+                    Kilo problemi yaşayan herkese istedikleri kiloya ulaşmak için doğru adımları atmak ve profesyonel hizmet almak isteyen kullanıcıların öncelikli tercihi olan YEMEK YADA YEMEMEK, 2020 Haziran ayında, Ankar’da faaliyete geçti.
+
+                    Beslenme ve diyetetik alanında güvenin azaldığı dönemde samimi ve başarılı diyetisyenleriyle hizmet etme misyonuyla kurulmuş olan sitemiz, önceikle kişinin kendi isteğine göre tercihlerde bulunduğu kullnaıcılarla tek taraflı iletişime geçilen bir site olarak başladı.Şimdi ise sektörde birçok kurumsal ve bireysel müşteriye hizmet sağlayıp, kullanıcıların web sitelerinin içerik ihtiyaçlarını kaliteli bir şekilde karşılayarak çalışmalarımızı sürdürüyoruz.
+
+                    Daima gelişip,ihtiyaçlara en doğru cevabı vermeyi vizyon edinmiş YEMEK YA DA YEMEMK ailesi olarak,gelişime odaklanmış ve daima günün ilerisinde olma prensibiyle, hem müşteriler hem de sektörde çalışmak isteyen vizyon sahibi kişiler için prestijli bir marka olmaya devam etmekteyiz.
+                   
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- FOOTER SECTİON -->
+
+    <footer class="sectionArea">
+        <div class="container">
+            <div class="col3">
+                <div class="footerItem">
+                    <h3>HOSGELDİNİZ</h3>
+                    <a href="/Vitrin/Index/"><img src="~/webx/images/logo.PNG"></a>
+
+                </div>
+            </div>
+            <div class="col3">
+                <div class="footerItem">
+                    <h3>HIZLI BAGLANTI</h3>
+                    <ul class="footerLinks">
+                        <li><a href="/Vitrin/Index/">ANASAYFA</a></li>
+                        <li><a href="/Vitrin/Hakkimizda/">HAKKIMIZDA</a></li>
+                        <li><a href="/Vitrin/Iletisim/">İLETİŞİM</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col3">
+                <div class="footerItem">
+                    <h3>SOSYAL MEDYA </h3>
+                    <ul class="socialLinks">
+                        <li><a href="#"><i class="fa fa-twitter "></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+                    </ul>
+
+                    <p>Bize sosyal medya hesaplarımızdanda ulaşabilirsiiniz.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
